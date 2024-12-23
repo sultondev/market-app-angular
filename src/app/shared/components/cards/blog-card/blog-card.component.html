@@ -1,0 +1,37 @@
+<div class="max-w-[600px] shadow-xl rounded-sm overflow-hidden">
+  <img [src]="blogItem.thumbnailUrl" alt="" height="306px" class="">
+
+  <div class="p-6">
+    <span class="block font-bold text-xl mb-3">
+      {{blogItem.heading}}
+    </span>
+    <div class="mb-3 text-article-light-gray flex gap-4">
+      <span class="">
+        {{BlogHashTags[blogItem.hashTag]}}
+      </span>
+      |
+      <span class="">
+        {{blogItem.postedAt}}
+      </span>
+      |
+      <div class="flex gap-2">
+        <img src="sources/icons/general/chat-icon.svg" alt="">
+        <span *ngIf="blogItem.commentsCount > 0; else noContent" class="">
+          {{blogItem.commentsCount === 1 ? '1 comment' : blogItem.commentsCount + ' comments' }}
+        </span>
+        <ng-template #noContent class="">
+          <span class="">
+            No comments
+          </span>
+        </ng-template>
+      </div>
+    </div>
+
+
+    <article class="">
+      <p class="text-ellipsis text-moder overflow-hidden line-clamp-2">
+        {{blogItem.shortContent}}
+      </p>
+    </article>
+  </div>
+</div>

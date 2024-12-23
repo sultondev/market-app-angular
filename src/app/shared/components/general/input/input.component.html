@@ -1,0 +1,14 @@
+<div [ngClass]="templateClass">
+  <label *ngIf="label" [ngClass]="labelClass">{{ label }}</label>
+  <div class="input-wrapper flex" [ngClass]="wrapperClass">
+      <ng-content select="[slot='before']"></ng-content>
+      <input
+        [type]="type"
+        [placeholder]="placeholder"
+        [value]="value"
+        (input)="onValueChange($event)"
+        [class]="inputClass"
+      />
+      <ng-content select="[slot='after']"></ng-content>
+  </div>
+</div>

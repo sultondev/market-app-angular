@@ -1,0 +1,30 @@
+<div class="bg-easy-gray">
+    <div class="container flex mx-auto justify-between items-center xlTablet:gap-0 gap-x-8">
+        <div class=" py-24">
+            <h6 class="mb-6 xlTablet:text-5xl font-extrabold text-2xl">Subscribe for updates</h6>
+
+            <p class="text-moderate-gray xlTablet:text-xl text-base mb-8">Subscribe for exclusive early sale access and new arrivals.</p>
+
+            <div class="mb-8">
+              <app-tablet-select [options]="subscriptionList" [multiple]="true" [(modelValue)]="selectedOption"></app-tablet-select>
+            </div>
+
+            <div class="">
+                <app-input [(ngModel)]="email" type="email" placeholder="example@gmail.com"
+                label="Email"
+                templateClass="mb-4"
+                labelClass="text-base"
+                inputClass="rounded-l outline-none focus:border-primary-green"
+                >
+                    <button class="bg-primary-green text-white py-2 px-4 rounded-r text-base font-semibold" slot="after">Subscribe</button>
+                </app-input>
+                <div class="flex items-center gap-2">
+                  <input type="checkbox" name="agreement" id="agreement-input">
+                  <label for="agreement-input" class="text-base font-medium">I agree to receive communications from Createx Store.</label>
+                </div>
+
+            </div>
+        </div>
+        <img src="sources/images/subscription-banner.svg" class="xlTablet:w-2/5 miniXLTablet:w-72 xlPhone:w-56 xlPhone:block hidden" alt="My Image">
+    </div>
+</div>

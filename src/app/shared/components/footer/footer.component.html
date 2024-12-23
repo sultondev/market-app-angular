@@ -1,0 +1,80 @@
+<footer class="bg-primary-dark  text-white">
+    <div class="container mx-auto pt-10 pb-6">
+        <ul class="grid laptop:grid-cols-4 miniXLTablet:grid-cols-2 laptop:gap-0 gap-y-6">
+            <li>
+              <span class="text-base font-bold mb-3 block">HELP</span>
+              <ul class="">
+                <li *ngFor="let item of helpLinks">
+                  <a [href]="item.url" class="text-half-white">
+                    {{item.text}}
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <span class="text-base font-bold mb-3 block">SHOP</span>
+              <ul class="">
+                <li *ngFor="let item of shopLinks">
+                  <a [href]="item.url" class="text-half-white">
+                    {{item.text}}
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <span class="text-base font-bold mb-3 block">GET IN TOUCH</span>
+              <ul class="">
+                <li>
+                  <span class="">
+                    Call:
+                  </span>
+                  <span class="text-half-white">
+                    (405) 555-0128
+                  </span>
+                </li>
+                <li class="mb-6">
+                  <span class="">
+                    Email:
+                  </span>
+                  <span class="text-half-white">
+                    hello&#x40;reatex.com
+                  </span>
+                </li>
+                <li>
+                  <ul class="flex gap-2">
+                    <li *ngFor="let item of socialLinks" class="text-base">
+                      <a [href]="item.url" class="bg-low-white block h-auto p-1 rounded">
+                        <img [src]="item.icon" class="w-[16px]" alt="">
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <span class="text-base font-bold mb-6 block">DOWNLOAD OUT APP</span>
+              <ul class="flex gap-4">
+                <li>
+                  <a href="#" class="">
+                    <img src="sources/icons/stores/app-store.svg" alt="">
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="">
+                    <img src="sources/icons/stores/google-play.svg" alt="">
+                  </a>
+                </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+    <div class="w-full  border-b border-separator-gray"></div>
+    <div class="container mx-auto py-4 flex justify-between">
+        <p class="text-sm">
+            &copy; All rights reversed. Made with Angular by Sultan
+        </p>
+        <button (click)="handleClickToTop()" class="text-half-white">
+            Go to top
+        </button>
+    </div>
+</footer>

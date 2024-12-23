@@ -1,0 +1,18 @@
+.tablet__item {
+  @apply border
+   border-light-gray
+   py-0.5
+   px-2
+   rounded
+   text-moderate-gray
+   text-sm
+   cursor-pointer
+   ;
+
+  &.active {
+    @apply border-primary-green
+      text-white
+      bg-primary-green
+    ;
+  }
+}

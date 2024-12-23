@@ -1,0 +1,9 @@
+<div>
+    <ul class="flex gap-2">
+        <li *ngFor="let item of computedOptions"  class="tablet__item"
+          [ngClass]="{active: item.isActive}" (click)="toggleSelection(item)">
+          {{ item.label | titlecase }}
+        </li>
+    </ul>
+</div>
+
